@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de cliente:"
+        android:layout_marginBottom="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:checkedButton="@id/rb_particular"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_particular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Particular"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/rb_corporativo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Corporativo"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_particular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/eT_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:inputType="textPersonName"
+            android:hint="Nombre completo"/>
+        <EditText
+            android:id="@+id/eT_profesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profesion"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_corporativo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <EditText
+            android:id="@+id/eT_razonSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="Razon Social"
+            android:inputType="textPersonName"/>
+        <EditText
+            android:id="@+id/eT_representante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="Representante"
+            android:inputType="textPersonName"/>
+        <EditText
+            android:id="@+id/eT_numEmpleados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero de empleados"
+            android:inputType="number"/>
+    </LinearLayout>
+</LinearLayout>
